@@ -1,0 +1,33 @@
+@import "@shoelace-style/shoelace/dist/themes/light.css";
+@import "@shoelace-style/shoelace/dist/themes/dark.css";
+
+:root {
+  --cell-header-height: calc(
+    var(--sl-line-height-normal) * 1rem + var(--sl-spacing-x-small) * 2 +
+      var(--sl-panel-border-width) * 2
+  );
+  --cell-footer-height: calc(var(--cell-header-height) + 4px);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: var(--sl-line-height-normal);
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--sl-font-sans);
+  font-weight: var(--sl-font-weight-normal);
+  line-height: var(--sl-line-height-normal);
+  color: var(--sl-color-neutral-900);
+  background-color: var(--sl-color-neutral-0);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
