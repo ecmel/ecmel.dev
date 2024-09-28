@@ -14,20 +14,18 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  box-sizing: border-box;
   line-height: var(--sl-line-height-normal);
 }
 
 body {
+  overflow: hidden;
   font-size: 16px;
   font-family: var(--sl-font-sans);
   font-weight: var(--sl-font-weight-normal);
-  line-height: var(--sl-line-height-normal);
-  color: var(--sl-color-neutral-900);
-  background-color: var(--sl-color-neutral-0);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow: hidden;
+  color: var(--sl-color-neutral-900);
+  background-color: var(--sl-color-neutral-0);
 }

@@ -63,6 +63,8 @@ export class CellsView extends LitElement {
   accountCode: string = "";
   @state()
   accountList: Account[] = [];
+  @state()
+  notation: "standard" | "compact" = "standard";
 
   get disabled() {
     return this.transfer.entries.length < 2;
@@ -88,7 +90,7 @@ export class CellsView extends LitElement {
     return this.transfer.entries.reduce((sum, { credit }) => sum + credit, 0n);
   }
 
-  readonly fetchTask = new Task(this, {
+  protected readonly fetchTask = new Task(this, {
     task: async (_args, { signal }) => {
       this.accountList = this.accountCode
         ? await getAccounts(this.accountCode, signal)
@@ -97,19 +99,33 @@ export class CellsView extends LitElement {
     args: () => [this.accountCode],
   });
 
+  protected media: MediaQueryList | null = null;
+
+  protected readonly handleMatchMedia = () =>
+    (this.notation = this.media!.matches ? "compact" : "standard");
+
   constructor() {
     super();
     this.addEventListener("keydown", (e: KeyboardEvent) => {
-      switch (e.key) {
-        case "b":
-        case "B":
-          if (e.metaKey) {
-            this.balance();
-            this.requestUpdate();
-            e.preventDefault();
-          }
+      if (["b", "B"].includes(e.key) && e.metaKey) {
+        this.balance();
+        this.requestUpdate();
+        e.preventDefault();
       }
     });
+  }
+
+  connectedCallback(): void {
+    super.connectedCallback();
+    this.media = window.matchMedia("screen and (max-width: 576px)");
+    this.media.addEventListener("change", this.handleMatchMedia);
+    this.handleMatchMedia();
+  }
+
+  disconnectedCallback(): void {
+    super.disconnectedCallback();
+    this.media!.removeEventListener("change", this.handleMatchMedia);
+    this.media = null;
   }
 
   balance() {
@@ -344,7 +360,10 @@ export class CellsView extends LitElement {
                 @keydown="${(e: KeyboardEvent) => {
                   this.handleKeyDown(e);
                 }}"
-                ><cell-format value="${Numeric(value.debit)}"></cell-format
+                ><cell-format
+                  value="${Numeric(value.debit)}"
+                  notation="${this.notation}"
+                ></cell-format
               ></cell-input>
               <cell-input
                 auto
@@ -362,7 +381,10 @@ export class CellsView extends LitElement {
                 @keydown="${(e: KeyboardEvent) => {
                   this.handleKeyDown(e);
                 }}"
-                ><cell-format value="${Numeric(value.credit)}"></cell-format
+                ><cell-format
+                  value="${Numeric(value.credit)}"
+                  notation="${this.notation}"
+                ></cell-format
               ></cell-input>
             </cell-group>
           `
@@ -372,10 +394,16 @@ export class CellsView extends LitElement {
           <cell-footer></cell-footer>
           <cell-footer justify="end">TOTAL</cell-footer>
           <cell-footer justify="end"
-            ><cell-format value="${Numeric(this.debit)}"></cell-format
+            ><cell-format
+              value="${Numeric(this.debit)}"
+              notation="${this.notation}"
+            ></cell-format
           ></cell-footer>
           <cell-footer justify="end"
-            ><cell-format value="${Numeric(this.credit)}"></cell-format
+            ><cell-format
+              value="${Numeric(this.credit)}"
+              notation="${this.notation}"
+            ></cell-format
           ></cell-footer>
         </cell-group>
       </cell-grid>
