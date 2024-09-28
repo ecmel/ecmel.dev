@@ -182,7 +182,7 @@ export class CellsView extends LitElement {
           <cell-item span="2"></cell-item>
         </cell-group>
         <cell-group>
-          <cell-item jump="next">Date</cell-item>
+          <cell-item>Date</cell-item>
           <cell-input
             type="date"
             value="${this.transfer.date}"
@@ -203,7 +203,7 @@ export class CellsView extends LitElement {
           ></cell-input>
         </cell-group>
         <cell-group>
-          <cell-item jump="next">Description</cell-item>
+          <cell-item>Description</cell-item>
           <cell-input
             value="${this.transfer.description}"
             @input="${(e: Event) => {
@@ -217,7 +217,7 @@ export class CellsView extends LitElement {
           ></cell-input>
         </cell-group>
         <cell-group>
-          <cell-item jump="next">Options</cell-item>
+          <cell-item>Options</cell-item>
           <cell-select
             readonly
             list="options"
@@ -301,7 +301,7 @@ export class CellsView extends LitElement {
                   }}"
                 ></sl-checkbox
               ></cell-item>
-              <cell-item jump="next">${value.code}</cell-item>
+              <cell-item>${value.code}</cell-item>
               <cell-select
                 stretch
                 truncate
