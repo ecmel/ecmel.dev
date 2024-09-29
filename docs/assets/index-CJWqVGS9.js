@@ -41,18 +41,9 @@
  * Copyright 2021 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */function Kn(e){return(t,n)=>{const{slot:i,selector:r}=e??{},o="slot"+(i?`[name=${i}]`:":not([name])");return Ko(t,n,{get(){var l;const s=(l=this.renderRoot)==null?void 0:l.querySelector(o),a=(s==null?void 0:s.assignedElements(e))??[];return r===void 0?a:a.filter(c=>c.matches(r))}})}}const rn=st`
-  *,
-  *::before,
-  *::after {
+  :host {
     box-sizing: border-box;
-  }
-
-  * {
-    margin: 0;
-  }
-
-  :host([hide]) {
-    display: none;
+    --line-height: calc(var(--sl-line-height-normal) * 1rem);
   }
 `,Go=st`
   :host {
@@ -121,6 +112,10 @@
       :host(:focus) {
         outline: 0;
       }
+
+      :host([hide]) {
+        display: none;
+      }
     `];sn([k({type:Boolean,reflect:!0})],ie.prototype,"hide",void 0);sn([Kn({selector:"cell-option[selected]"})],ie.prototype,"selected",void 0);sn([Kn({selector:"cell-option[active]"})],ie.prototype,"active",void 0);sn([Kn({selector:"cell-option"})],ie.prototype,"options",void 0);ie=sn([yt("cell-datalist")],ie);var Ot=function(e,t,n,i){var r=arguments.length,o=r<3?t:i===null?i=Object.getOwnPropertyDescriptor(t,n):i,s;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(e,t,n,i);else for(var a=e.length-1;a>=0;a--)(s=e[a])&&(o=(r<3?s(o):r>3?s(t,n,o):s(t,n))||o);return r>3&&o&&Object.defineProperty(t,n,o),o};let Q=class extends kt{constructor(){super(...arguments),this.grow="0",this.shrink="1",this.basis="auto"}render(){return Et`<slot></slot>`}willUpdate(t){super.willUpdate(t),(t.has("grow")||t.has("shrink")||t.has("basis"))&&this.style.setProperty("--property-flex",`${this.grow} ${this.shrink} ${this.basis}`)}};Q.styles=[rn,st`
       :host {
         display: flex;
@@ -174,7 +169,10 @@
         border-bottom: var(--sl-panel-border-width) solid
           var(--sl-panel-border-color);
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        min-height: calc(1rem * var(--sl-line-height-normal));
+        min-height: calc(
+          var(--line-height) + 2 * var(--sl-spacing-x-small) +
+            var(--sl-panel-border-width)
+        );
       }
 
       :host([truncate]) {
@@ -256,12 +254,12 @@
 
       .input,
       .input:focus {
-        padding: var(--sl-spacing-x-small);
         outline: 0;
         border: 0;
         margin: 0;
         display: inline;
         flex-grow: 1;
+        box-sizing: inherit;
         font-family: inherit;
         font-style: inherit;
         font-size: inherit;
@@ -273,6 +271,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        padding: var(--sl-spacing-x-small);
       }
 
       :host([justify="end"]) > .input {

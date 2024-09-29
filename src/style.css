@@ -26,6 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
   color: var(--sl-color-neutral-900);
   background-color: var(--sl-color-neutral-0);
 }
