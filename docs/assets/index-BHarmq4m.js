@@ -43,7 +43,6 @@
  */function Kn(e){return(t,n)=>{const{slot:i,selector:r}=e??{},o="slot"+(i?`[name=${i}]`:":not([name])");return Ko(t,n,{get(){var l;const s=(l=this.renderRoot)==null?void 0:l.querySelector(o),a=(s==null?void 0:s.assignedElements(e))??[];return r===void 0?a:a.filter(c=>c.matches(r))}})}}const rn=st`
   :host {
     box-sizing: border-box;
-    --line-height: calc(var(--sl-line-height-normal) * 1rem);
   }
 `,Go=st`
   :host {
@@ -170,7 +169,7 @@
           var(--sl-panel-border-color);
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         min-height: calc(
-          var(--line-height) + 2 * var(--sl-spacing-x-small) +
+          1rem * var(--sl-line-height-normal) + 2 * var(--sl-spacing-x-small) +
             var(--sl-panel-border-width)
         );
       }
@@ -254,9 +253,9 @@
 
       .input,
       .input:focus {
-        outline: 0;
         border: 0;
         margin: 0;
+        outline: 0;
         display: inline;
         flex-grow: 1;
         box-sizing: inherit;
@@ -264,7 +263,6 @@
         font-style: inherit;
         font-size: inherit;
         font-weight: inherit;
-        line-height: inherit;
         background-color: inherit;
         min-width: unset;
         min-height: unset;

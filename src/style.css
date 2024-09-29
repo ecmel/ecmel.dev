@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  box-sizing: border-box;
   line-height: var(--sl-line-height-normal);
 }
 
@@ -22,11 +23,11 @@ body {
   font-size: 16px;
   font-family: var(--sl-font-sans);
   font-weight: var(--sl-font-weight-normal);
+  letter-spacing: var(--sl-letter-spacing-normal);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
   color: var(--sl-color-neutral-900);
   background-color: var(--sl-color-neutral-0);
 }
