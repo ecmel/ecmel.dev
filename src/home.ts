@@ -36,7 +36,7 @@ export class HomeView extends LitElement {
         >Defter iOS</sl-button
       >
       <sl-button
-        href="https://github.com/ecmel/ecmel.dev/releases/download/defter/app-universal-release.apk"
+        href="https://github.com/ecmel/ecmel.dev/releases/download/0.0.1/app-universal-release.apk"
         >Android</sl-button
       >
     `;

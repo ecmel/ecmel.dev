@@ -2022,7 +2022,7 @@ var Ka=Object.defineProperty;var Ko=e=>{throw TypeError(e)};var Xa=(e,t,n)=>t in
         >Defter iOS</sl-button
       >
       <sl-button
-        href="https://github.com/ecmel/ecmel.dev/releases/download/defter/app-universal-release.apk"
+        href="https://github.com/ecmel/ecmel.dev/releases/download/0.0.1/app-universal-release.apk"
         >Android</sl-button
       >
     `}};ro.styles=[V`
