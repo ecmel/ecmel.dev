@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "79P8U57KXZ.dev.ecmel.uyar"
+        ],
+        "components": [
+          {
+            "/": "/uyar/*",
+            "comment": "Matches any URL whose path starts with /open/"
+          }
+        ]
+      }
+    ]
+  }
+}
