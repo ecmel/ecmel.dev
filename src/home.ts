@@ -13,13 +13,14 @@ export class HomeView extends LitElement {
     css`
       :host {
         display: flex;
+        flex-flow: row nowrap;
         justify-content: center;
       }
 
       .container {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        padding: 1rem;
       }
     `,
   ];
