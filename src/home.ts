@@ -67,6 +67,10 @@ export class HomeView extends LitElement {
             <a
               href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_aarch64.dmg"
               >MacOS</a
+            >,
+            <a
+              href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_x64.dmg"
+              >MacOS (Intel)</a
             >
             and
             <a

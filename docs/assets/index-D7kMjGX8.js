@@ -2046,6 +2046,10 @@ var Ka=Object.defineProperty;var Ko=e=>{throw TypeError(e)};var Xa=(e,t,n)=>t in
             <a
               href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_aarch64.dmg"
               >MacOS</a
+            >,
+            <a
+              href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_x64.dmg"
+              >MacOS (Intel)</a
             >
             and
             <a
