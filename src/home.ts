@@ -55,28 +55,7 @@ export class HomeView extends LitElement {
             <a
               href="https://github.com/ecmel/ecmel.dev/releases/download/2/app-arm64-release.apk"
               >Android</a
-            >, and <strong>Verditum</strong> for
-            <a
-              href="itms-services://?action=download-manifest&url=https://ecmel.dev/verditum/manifest.plist"
-              >iOS</a
-            >,
-            <a
-              href="https://github.com/ecmel/ecmel.dev/releases/download/1/app-arm64-release.apk"
-              >Android</a
-            >,
-            <a
-              href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_aarch64.dmg"
-              >MacOS</a
-            >,
-            <a
-              href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_x64.dmg"
-              >MacOS (Intel)</a
             >
-            and
-            <a
-              href="https://github.com/ecmel/ecmel.dev/releases/download/1/Verditum_0.0.1_x64-setup.exe"
-              >Windows</a
-            >.
           </p>
         </div>
       </div>
