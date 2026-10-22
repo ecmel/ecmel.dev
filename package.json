@@ -11,9 +11,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@picocss/pico": "2.1.1",
     "npm-check-updates": "19.6.3",
-    "sass": "1.93.3",
+    "open-props": "1.7.23",
     "vite": "7.3.1"
   }
 }

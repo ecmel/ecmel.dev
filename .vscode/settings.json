@@ -1,6 +1,7 @@
 {
   "css.styleSheets": [
-    "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
-    "style.scss"
+    "node_modules/open-props/open-props.min.css",
+    "node_modules/open-props/normalize.min.css",
+    "style.css"
   ]
 }
