@@ -4,37 +4,106 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Ecmel Ercan, software developer. Open source tools for VS Code, Tauri and the web."
+    />
     <title>Ecmel Ercan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="container">
-      <nav>
+    <header class="container site-header">
+      <a class="logo" href="/">ecmel<span>.dev</span></a>
+      <nav aria-label="Main">
         <ul>
-          <li><strong>Ecmel Ercan</strong></li>
-        </ul>
-        <ul>
-          <li><a href="#">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#defter">Defter</a></li>
           <li><a href="https://github.com/ecmel">GitHub</a></li>
         </ul>
       </nav>
-      <p>
-        Welcome to my home page. My name is Ecmel Ercan. I am a software
-        developer. You can find my open source work on
-        <a href="https://github.com/ecmel">GitHub</a>
-      </p>
-      <p>
-        Also you can download beta versions of <strong>Defter</strong> for
-        <a
-          href="itms-services://?action=download-manifest&url=https://ecmel.dev/defter/manifest.plist"
-          >iOS</a
-        >
-        and
-        <a
-          href="https://github.com/ecmel/ecmel.dev/releases/download/2/app-arm64-release.apk"
-          >Android</a
-        >
-      </p>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Ecmel Ercan</h1>
+        <p class="lead">
+          Software developer based in Izmir. I build developer tools, editor
+          extensions and apps, and share most of it as open source.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/ecmel">
+            View my GitHub
+          </a>
+          <a class="button" href="#projects">See projects</a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Open source</h2>
+        <ul class="cards">
+          <li class="card">
+            <h3>
+              <a href="https://github.com/ecmel/vscode-html-css">
+                vscode-html-css
+              </a>
+            </h3>
+            <p>CSS IntelliSense for HTML in Visual Studio Code.</p>
+            <span class="tag">TypeScript</span>
+          </li>
+          <li class="card">
+            <h3>
+              <a href="https://github.com/ecmel/vscode-launcher">
+                vscode-launcher
+              </a>
+            </h3>
+            <p>Launch files from the editor using launch.json configurations.</p>
+            <span class="tag">TypeScript</span>
+          </li>
+          <li class="card">
+            <h3>
+              <a href="https://github.com/ecmel/vscode-archiver">
+                vscode-archiver
+              </a>
+            </h3>
+            <p>Archive workspace folders from Visual Studio Code.</p>
+            <span class="tag">TypeScript</span>
+          </li>
+          <li class="card">
+            <h3>
+              <a href="https://github.com/ecmel/tauri-plugin-view">
+                tauri-plugin-view
+              </a>
+            </h3>
+            <p>A mobile plugin for Tauri for viewing and sharing files.</p>
+            <span class="tag">Rust</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="defter" class="callout">
+        <div>
+          <h2>Defter</h2>
+          <p>Beta versions are available for download on iOS and Android.</p>
+        </div>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="itms-services://?action=download-manifest&url=https://ecmel.dev/defter/manifest.plist"
+            >Download for iOS</a
+          >
+          <a
+            class="button"
+            href="https://github.com/ecmel/ecmel.dev/releases/download/2/app-arm64-release.apk"
+            >Download for Android</a
+          >
+        </div>
+      </section>
     </main>
+
+    <footer class="container site-footer">
+      <p>&copy; Ecmel Ercan</p>
+      <a href="https://github.com/ecmel">github.com/ecmel</a>
+    </footer>
   </body>
 </html>
