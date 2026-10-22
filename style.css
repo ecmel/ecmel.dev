@@ -244,27 +244,10 @@ section h2 {
   font-size: var(--font-size-0);
 }
 
-/* Defter callout */
-
-.callout {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--size-5);
-  padding: var(--size-7);
-  border: var(--border-size-1) solid var(--border);
-  border-radius: var(--radius-4);
-  background: linear-gradient(135deg, var(--glow), transparent 60%),
-    var(--surface-2);
-}
-
-.callout h2 {
-  margin-block-end: var(--size-2);
-}
-
-.callout p {
-  color: var(--text-2);
+.more {
+  display: inline-block;
+  margin-block-start: var(--size-5);
+  font-weight: var(--font-weight-6);
 }
 
 /* Footer */
